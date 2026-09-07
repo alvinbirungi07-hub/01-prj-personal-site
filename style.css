@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-
 /* These variables make the main colors easy to change later. */
 :root {
-	--ink: #162a2d;
-	--muted: #607072;
-	--paper: #f5f3ee;
-	--cream: #e4ded2;
-	--teal: #a8d2cc;
-	--coral: #ef765b;
-	--white: #fffdf9;
+	--ink: #111111;
+	--muted: #655d4b;
+	--paper: #f7f3e8;
+	--cream: #e9dfc7;
+	--gold: #d4a72c;
+	--white: #fffaf0;
 }
 
 * {
@@ -23,13 +20,19 @@ body {
 	margin: 0;
 	color: var(--ink);
 	background: var(--paper);
-	font-family: 'DM Sans', sans-serif;
+	font-family: 'Times New Roman', Times, serif;
 	line-height: 1.6;
 }
 
 a {
 	color: inherit;
 	text-decoration: none;
+}
+
+/* This makes links easy to find when someone uses a keyboard. */
+a:focus-visible {
+	outline: 3px solid var(--gold);
+	outline-offset: 4px;
 }
 
 .site-header {
@@ -46,14 +49,13 @@ a {
 }
 
 .logo {
-	font-family: 'Space Grotesk', sans-serif;
 	font-size: 1.5rem;
 	font-weight: 700;
 }
 
 .logo span,
 em {
-	color: var(--coral);
+	color: var(--gold);
 	font-style: normal;
 }
 
@@ -64,12 +66,12 @@ nav a {
 
 nav a:hover,
 .text-link:hover {
-	color: var(--coral);
+	color: var(--gold);
 }
 
 .nav-button {
 	padding: 10px 17px;
-	border: 1px solid rgba(255, 253, 249, 0.7);
+	border: 1px solid rgba(255, 250, 240, 0.7);
 	border-radius: 20px;
 }
 
@@ -80,7 +82,7 @@ nav a:hover,
 	min-height: 680px;
 	padding: 130px 12% 80px;
 	color: var(--white);
-	background: linear-gradient(90deg, rgba(10, 29, 32, 0.9), rgba(10, 29, 32, 0.35)), url('img/hero-bg.jpg') center / cover;
+	background: linear-gradient(90deg, rgba(17, 17, 17, 0.94), rgba(17, 17, 17, 0.45)), url('img/hero-bg.jpg') center / cover;
 }
 
 .hero-content {
@@ -97,7 +99,7 @@ nav a:hover,
 }
 
 .eyebrow {
-	color: var(--teal);
+	color: var(--gold);
 }
 
 h1,
@@ -105,13 +107,13 @@ h2,
 h3,
 .logo {
 	line-height: 1.05;
+	font-family: 'Times New Roman', Times, serif;
 }
 
 h1,
 h2,
 h3 {
 	margin: 0;
-	font-family: 'Space Grotesk', sans-serif;
 }
 
 h1 {
@@ -123,7 +125,7 @@ h1 {
 
 .hero-text {
 	max-width: 490px;
-	color: #dbe5e2;
+	color: #f4eddd;
 	font-size: 1.1rem;
 }
 
@@ -133,7 +135,7 @@ h1 {
 	padding: 14px 20px;
 	border-radius: 3px;
 	color: var(--ink);
-	background: var(--teal);
+	background: var(--gold);
 	font-weight: 700;
 }
 
@@ -150,13 +152,13 @@ h1 {
 	position: absolute;
 	right: 6%;
 	bottom: 30px;
-	color: #dbe5e2;
+	color: #f4eddd;
 	font-size: 0.8rem;
 }
 
 .scroll-note span {
 	margin-left: 8px;
-	color: var(--coral);
+	color: var(--gold);
 	font-size: 1.3rem;
 }
 
@@ -166,7 +168,7 @@ h1 {
 
 .section-label {
 	margin-bottom: 45px;
-	color: var(--coral);
+	color: var(--gold);
 }
 
 .about {
@@ -205,7 +207,7 @@ h2 {
 .text-link {
 	display: inline-block;
 	margin-top: 15px;
-	border-bottom: 2px solid var(--coral);
+	border-bottom: 2px solid var(--gold);
 	font-weight: 700;
 }
 
@@ -223,14 +225,14 @@ h2 {
 
 .skill-list li {
 	padding: 18px 0;
-	border-bottom: 1px solid rgba(255, 253, 249, 0.25);
+	border-bottom: 1px solid rgba(255, 250, 240, 0.25);
 	font-size: 1.15rem;
 }
 
 .skill-list span {
 	display: inline-block;
 	width: 45px;
-	color: var(--teal);
+	color: var(--gold);
 	font-size: 0.75rem;
 }
 
@@ -265,7 +267,7 @@ h2 {
 
 .project-number {
 	margin: 0 0 12px;
-	color: var(--coral);
+	color: var(--gold);
 }
 
 h3 {
@@ -278,24 +280,100 @@ h3 {
 
 .project-card-placeholder {
 	min-height: 270px;
-	background: var(--teal);
+	background: var(--gold);
 }
 
 .placeholder-mark {
 	padding: 26px 28px 0;
-	color: var(--coral);
-	font-family: 'Space Grotesk', sans-serif;
+	color: var(--gold);
 	font-size: 3rem;
 }
 
 .contact {
 	color: var(--white);
 	text-align: center;
-	background: var(--coral);
+	background: var(--gold);
 }
 
 .contact .eyebrow {
 	color: var(--ink);
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 25px 6%;
+	color: var(--white);
+	background: var(--ink);
+	font-size: 0.85rem;
+}
+
+footer p {
+	margin: 0;
+}
+
+/* On smaller screens, stack content so every section stays easy to read. */
+@media (max-width: 700px) {
+	.site-header {
+		padding: 22px 6%;
+	}
+
+	nav a {
+		margin-left: 12px;
+		font-size: 0.78rem;
+	}
+
+	nav a:not(.nav-button) {
+		display: none;
+	}
+
+	.hero {
+		min-height: 620px;
+		padding: 120px 8% 75px;
+	}
+
+	.section {
+		padding: 75px 8%;
+	}
+
+	.about-content,
+	.skills-content,
+	.project-list {
+		display: block;
+	}
+
+	.about-content h2,
+	.about-copy,
+	.skill-list,
+	.project-card {
+		width: 100%;
+	}
+
+	.about-copy {
+		margin-top: 28px;
+	}
+
+	.profile-photo {
+		margin-top: 25px;
+	}
+
+	.skill-list {
+		margin-top: 30px;
+	}
+
+	.project-card + .project-card {
+		margin-top: 25px;
+	}
+
+	footer {
+		display: block;
+		padding: 22px 8%;
+	}
+
+	footer p + p {
+		margin-top: 8px;
+	}
 }
 
 .contact h2 {
